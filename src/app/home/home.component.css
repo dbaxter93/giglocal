@@ -1,0 +1,29 @@
+* {
+    color: #22252C;
+}
+
+p {
+    font-size: 2vh;
+    line-height: 1.5;
+    padding: 1vh 1vw;
+    position: relative;
+}
+
+#background {
+    background-image: url("/assets/images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 91vh;
+}
+
+.hero-unit {
+    padding: 2vh 1vw;
+    max-width: 70vw;
+    border-radius: 10px;
+    position: relative;
+    top: 10vh;
+    left: 15%;
+    background-color: #C0B3A0;
+    opacity: 0.9;
+}

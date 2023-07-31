@@ -1,0 +1,16 @@
+<div>
+    <h2>All Available Gigs</h2>
+</div>
+<div *ngIf="gigs else noListings">
+    <div *ngFor="let gig of gigs">
+        <a routerLink="/gigs/{{gig.id}}">{{gig.title | uppercase}}</a>
+    </div>
+</div>
+
+<ng-template #noListings>
+    <div>No available gigs at this time...</div>
+</ng-template>
+
+<div>
+    <a routerLink="/post-gig">Post Gig</a>
+</div>

@@ -1,0 +1,16 @@
+<form id="accountForm" label="Sign in to Your Account">
+    <div class="container">
+        <h1>Sign in to Your Account</h1>
+        <div id="username-field">
+            <input label="username" type="text" placeholder="Username" autofocus/>
+        </div>
+        <div id="password-field">
+            <input label="password" type="password" placeholder="Password"/> 
+        </div>
+        <hr>
+        <div id="login-button">
+            <button data-test-id="login" (click)="signIn()">Continue</button>
+            <p>New here? <a routerLink="/create-account">Sign up with GigLocal.</a></p>
+        </div>
+    </div>
+</form>

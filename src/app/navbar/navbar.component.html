@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-sm justify-content-between">
+    <a class="navbar-logo" routerLink="">GigLocal</a>
+    <ul>
+        <li *ngIf="!isAuthenticated">
+            <a class="nav-link" routerLink="/login" id="login">Sign In</a>
+        </li>
+        <li *ngIf="isAuthenticated">
+            <a class="nav-link" routerLink="" data-test-id="logout" (click)="signOut()">Sign Out</a>
+        </li>
+        <li>
+            <a class="nav-link" routerLink="/gigs">Gigs</a>
+        </li>
+        <li>
+            <a class="nav-link" routerLink="/search">Artists</a> <!-- update router to /artists once displayArtistsComponent established -->
+        </li>
+        <li>
+            <a class="nav-link" routerLink="">Home</a>
+        </li>
+    </ul>
+</nav>
+

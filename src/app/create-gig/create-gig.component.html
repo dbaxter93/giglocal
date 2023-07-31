@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Add Gig Details</h1>
+    <p>Complete each of the fields below to share with freelancing musicians in your area.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <form (ngSubmit)="saveGig()" data-test-id="gigForm" [formGroup]="gigForm">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input data-test-id="title" type="text" class="form-control" formControlName="title" placeholder="Enter a descriptive title here">
+          </div>
+          <div class="form-group">
+              <label for="description">Description</label>
+              <input data-test-id="description" type="textarea" class="form-control" formControlName="description" maxlength="255" placeholder="What kind of event are you hosting?\nWhat are you celebrating?\nWhat else would you like those seeking to perform at your event to know?">
+          </div>
+          <div class="form-group">
+              <label for="callFor">Instrumentation/Music Requested</label>
+              <input data-test-id="callFor" type="textarea" class="form-control" formControlName="callFor" maxlength="255" placeholder="Enter the instrumentation and/or style of music that you are seeking for your event">
+          </div>
+          <div class="form-group">
+              <label for="date">Date</label>
+              <input data-test-id="date" type="date" class="form-control" formControlName="date">
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input data-test-id="address" type="text" class="form-control" formControlName="address" placeholder="Enter the city your gig will be taking place">
+        </div>
+          <div *ngIf="!this.gigForm.valid && this.gigForm.touched" class="text-danger"> <!-- Don't know how to implement future date validation -->
+              All fields are required and the date of your gig must not be today's date.
+          </div>
+          <div class="form-group" >
+            <button data-test-id="submit" [disabled]="!this.gigForm.valid" type="submit" class="btn btn-success">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
